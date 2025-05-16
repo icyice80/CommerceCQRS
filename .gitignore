@@ -1,0 +1,81 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# Auto-generated files
+*.g.*
+*.i
+*.ipch
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.dbmdl
+
+# OS generated files
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# Visual Studio 2019/2022
+.vs/
+.vscode/
+
+# Rider IDE
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotCover
+*.dotCover
+
+# Azure Functions local settings
+local.settings.json
+
+# Logs
+*.log
+
+# Publish directory
+publish/
+wwwroot/
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+.nuget/
+packages/
+*.symbols.nupkg
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Entity Framework Migrations (optional)
+Migrations/
+
+# Test results
+TestResults/
+
+# StyleCop
+StyleCopReport.xml
+
+# Backup & reports
+*.orig
+*.bak
+*.tmp
+*.mdf
+*.ldf
