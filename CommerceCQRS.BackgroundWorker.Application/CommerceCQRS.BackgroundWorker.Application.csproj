@@ -7,11 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommerceCQRS.Cart.Write.Application\CommerceCQRS.Cart.Write.Application.csproj" />
     <ProjectReference Include="..\CommerceCQRS.Services.Shared.Messaging\CommerceCQRS.Services.Shared.Messaging.csproj" />
   </ItemGroup>
 

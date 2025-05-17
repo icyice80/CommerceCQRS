@@ -43,6 +43,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceCQRS.Cart.Read.Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceCQRS.Services.Shared.Infrastructure", "CommerceCQRS.Services.Shared.Infrastructure\CommerceCQRS.Services.Shared.Infrastructure.csproj", "{43E44DE7-368C-40A8-B846-2FFF13375157}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceCQRS.BackgroundWorker", "CommerceCQRS.BackgroundWorker\CommerceCQRS.BackgroundWorker.csproj", "{C874F9FE-FB12-447D-BF8D-D97CE3259AAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackgrounWorkers", "BackgrounWorkers", "{4B3EA510-6F65-4EE8-8643-1265D167CAAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceCQRS.BackgroundWorker.Application", "CommerceCQRS.BackgroundWorker.Application\CommerceCQRS.BackgroundWorker.Application.csproj", "{CF33DC87-7355-46C8-8E7E-B02BD0D99C1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceCQRS.BackgroundWorker.Infrastructure", "CommerceCQRS.BackgroundWorker.Infrastructure\CommerceCQRS.BackgroundWorker.Infrastructure.csproj", "{E654B75B-F5CC-46D7-A183-1A72B3CAD0F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceCQRS.Services.Shared.Messaging", "CommerceCQRS.Services.Shared.Messaging\CommerceCQRS.Services.Shared.Messaging.csproj", "{E8060273-44A2-4A50-9E0B-BD3EC50CD397}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +115,22 @@ Global
 		{43E44DE7-368C-40A8-B846-2FFF13375157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43E44DE7-368C-40A8-B846-2FFF13375157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E44DE7-368C-40A8-B846-2FFF13375157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C874F9FE-FB12-447D-BF8D-D97CE3259AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C874F9FE-FB12-447D-BF8D-D97CE3259AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C874F9FE-FB12-447D-BF8D-D97CE3259AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C874F9FE-FB12-447D-BF8D-D97CE3259AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF33DC87-7355-46C8-8E7E-B02BD0D99C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF33DC87-7355-46C8-8E7E-B02BD0D99C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF33DC87-7355-46C8-8E7E-B02BD0D99C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF33DC87-7355-46C8-8E7E-B02BD0D99C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E654B75B-F5CC-46D7-A183-1A72B3CAD0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E654B75B-F5CC-46D7-A183-1A72B3CAD0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E654B75B-F5CC-46D7-A183-1A72B3CAD0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E654B75B-F5CC-46D7-A183-1A72B3CAD0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8060273-44A2-4A50-9E0B-BD3EC50CD397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8060273-44A2-4A50-9E0B-BD3EC50CD397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8060273-44A2-4A50-9E0B-BD3EC50CD397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8060273-44A2-4A50-9E0B-BD3EC50CD397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,6 +153,10 @@ Global
 		{D4C0EC06-365A-4DB8-B1FC-7C9204B2DDF6} = {3E530585-31C5-4683-A5A6-738965A31BE3}
 		{80A30960-111B-415F-8E15-4132514B74F4} = {85EF2FE6-BC2B-4363-8EA0-4A53239CC6CA}
 		{43E44DE7-368C-40A8-B846-2FFF13375157} = {3E530585-31C5-4683-A5A6-738965A31BE3}
+		{C874F9FE-FB12-447D-BF8D-D97CE3259AAE} = {4B3EA510-6F65-4EE8-8643-1265D167CAAC}
+		{CF33DC87-7355-46C8-8E7E-B02BD0D99C1F} = {4B3EA510-6F65-4EE8-8643-1265D167CAAC}
+		{E654B75B-F5CC-46D7-A183-1A72B3CAD0F2} = {4B3EA510-6F65-4EE8-8643-1265D167CAAC}
+		{E8060273-44A2-4A50-9E0B-BD3EC50CD397} = {3E530585-31C5-4683-A5A6-738965A31BE3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5664EC71-83A4-4184-869E-88B540C56F94}

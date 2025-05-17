@@ -7,12 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.19.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommerceCQRS.Cart.Write.Application\CommerceCQRS.Cart.Write.Application.csproj" />
-    <ProjectReference Include="..\CommerceCQRS.Services.Shared.Messaging\CommerceCQRS.Services.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\CommerceCQRS.BackgroundWorker.Application\CommerceCQRS.BackgroundWorker.Application.csproj" />
   </ItemGroup>
 
 </Project>

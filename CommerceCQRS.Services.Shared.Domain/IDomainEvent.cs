@@ -3,6 +3,6 @@
     public interface IDomainEvent
     {
         Guid EventId { get; }
-        DateTime OccurredOn { get; }
+        DateTime OccurredOnUtc { get; }
     }
 }

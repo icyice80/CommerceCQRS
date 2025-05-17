@@ -1,11 +1,12 @@
 ﻿using CommerceCQRS.Services.Shared.Domain;
-using CommerceCQRS.Services.Shared.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using CommerceCQRS.Services.Shared.Application;
+using CommerceCQRS.Services.Shared.Messaging;
 
 namespace CommerceCQRS.Cart.Write.Infrastructure
 {
-    public class CartDbContext : DbContext
+    public class CartDbContext : DbContext, IUnitOfWork
     {
         public DbSet<OutboxMessage> OutboxMessages { get; set; } = null!;
 
@@ -30,10 +31,9 @@ namespace CommerceCQRS.Cart.Write.Infrastructure
                 var outboxMessage = new OutboxMessage
                 {
                     Id = Guid.NewGuid(),
-                    OccurredOn = domainEvent.OccurredOn,
+                    OccurredOn = domainEvent.OccurredOnUtc,
                     Type = domainEvent.GetType().AssemblyQualifiedName!,
                     Content = JsonSerializer.Serialize(domainEvent),
-                    Processed = false
                 };
                 OutboxMessages.Add(outboxMessage);
             }

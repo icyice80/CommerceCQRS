@@ -5,10 +5,10 @@
         public DomainEvent()
         {
             this.EventId = Guid.NewGuid();
-            this.OccurredOn = DateTime.Now;
+            this.OccurredOnUtc = DateTime.UtcNow;
         }
 
         public Guid EventId { get; }
-        public DateTime OccurredOn { get; }
+        public DateTime OccurredOnUtc { get; }
     }
 }

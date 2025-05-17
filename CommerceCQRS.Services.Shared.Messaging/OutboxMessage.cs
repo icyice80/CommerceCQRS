@@ -1,4 +1,4 @@
-﻿namespace CommerceCQRS.Services.Shared.Infrastructure
+﻿namespace CommerceCQRS.Services.Shared.Messaging
 {
     public record OutboxMessage
     {
@@ -6,7 +6,8 @@
         public DateTime OccurredOn { get; init; }
         public string Type { get; init; } = null!;
         public string Content { get; init; } = null!;
-        public bool Processed { get; init; }
-        public DateTime? ProcessedOn { get; init; }
+        public DateTime? ProcessedOnUtc { get; set; }
+
+        public DateTime? LockedUntilUtc { get; set; }
     }
 }
