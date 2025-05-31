@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -9,5 +9,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommerceCQRS.BackgroundWorker.Application\CommerceCQRS.BackgroundWorker.Application.csproj" />
+    <ProjectReference Include="..\CommerceCQRS.BackgroundWorker.Infrastructure\CommerceCQRS.BackgroundWorker.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

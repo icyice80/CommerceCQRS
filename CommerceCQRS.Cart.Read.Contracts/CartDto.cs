@@ -6,6 +6,7 @@
         public Guid? UserId { get; set; }
         public Guid? AnonymousId { get; set; }
         public string Status { get; set; }
+
         public List<CartItemDto> Items { get; set; } = new();
     }
 }

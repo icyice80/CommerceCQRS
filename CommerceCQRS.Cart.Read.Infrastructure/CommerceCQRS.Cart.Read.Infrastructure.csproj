@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommerceCQRS.Cart.Read.Contracts\CommerceCQRS.Cart.Read.Contracts.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommerceCQRS.Cart.Read.Application\CommerceCQRS.Cart.Read.Application.csproj" />
   </ItemGroup>
 
 </Project>
