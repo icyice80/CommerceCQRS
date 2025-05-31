@@ -7,10 +7,10 @@ namespace CommerceCQRS.Products.Application.GetProductId
 {
     public class GetProductByIdHandler : IRequestHandler<GetProductByIdQuery,GetProductResult>
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductQueryService _productRepository;
         private readonly ILogger<GetProductByIdHandler> _logger;
 
-        public GetProductByIdHandler(IProductRepository productRepository, ILogger<GetProductByIdHandler> logger)
+        public GetProductByIdHandler(IProductQueryService productRepository, ILogger<GetProductByIdHandler> logger)
         {
             this._productRepository = productRepository;
             this._logger = logger;

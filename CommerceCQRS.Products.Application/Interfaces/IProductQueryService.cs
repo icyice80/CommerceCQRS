@@ -2,7 +2,7 @@
 
 namespace CommerceCQRS.Products.Application.Interfaces
 {
-    public interface IProductRepository
+    public interface IProductQueryService
     {
         Task<ProductDto> GetProductByIdAsync(int productId, CancellationToken cancellationToken);
 

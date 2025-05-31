@@ -2,7 +2,7 @@
 
 namespace CommerceCQRS.Cart.Read.Application.Interfaces
 {
-    public interface ICartRepository
+    public interface ICartQueryService
     {
         Task<CartDto?> GetActiveCartAsync(Guid? userId, Guid? anonymousId, CancellationToken cancellationToken);
     }

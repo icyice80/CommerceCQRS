@@ -7,9 +7,9 @@ namespace CommerceCQRS.Products.Application.GetAllProducts
 {
     public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, GetPagedProductsResult<ProductSummaryDto>>
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductQueryService _productRepository;
         private readonly ILogger<GetAllProductsHandler> _logger;
-        public GetAllProductsHandler(IProductRepository productRepository, ILogger<GetAllProductsHandler> logger)
+        public GetAllProductsHandler(IProductQueryService productRepository, ILogger<GetAllProductsHandler> logger)
         {
             this._productRepository = productRepository;
             this._logger = logger;

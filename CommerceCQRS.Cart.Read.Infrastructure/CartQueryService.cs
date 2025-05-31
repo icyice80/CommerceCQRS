@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CommerceCQRS.Cart.Read.Infrastructure
 {
-    public class CartRepository : ICartRepository
+    public class CartQueryService : ICartQueryService
     {
         private readonly AppDbContext _context;
 
-        public CartRepository(AppDbContext context)
+        public CartQueryService(AppDbContext context)
         {
             _context = context;
         }

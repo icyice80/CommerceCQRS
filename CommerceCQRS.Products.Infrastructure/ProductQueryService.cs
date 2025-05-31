@@ -3,7 +3,7 @@ using CommerceCQRS.Products.Contracts;
 
 namespace CommerceCQRS.Products.Infrastructure
 {
-    public class ProductRepository : IProductRepository
+    public class ProductQueryService : IProductQueryService
     {
         public Task<ProductDto> GetProductByIdAsync(int productId, CancellationToken cancellationToken)
         {

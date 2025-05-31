@@ -5,9 +5,9 @@ namespace CommerceCQRS.Cart.Read.Application.GetCart
 {
     public class GetCartQueryHandler : IRequestHandler<GetCartQuery, GetCartResult>
     {
-        private readonly ICartRepository _cartRepository;
+        private readonly ICartQueryService _cartRepository;
 
-        public GetCartQueryHandler(ICartRepository cartRepository)
+        public GetCartQueryHandler(ICartQueryService cartRepository)
         {
             this._cartRepository = cartRepository;
         }
