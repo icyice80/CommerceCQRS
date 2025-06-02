@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using CommerceCQRS.Services.Shared.Application;
 using CommerceCQRS.Services.Shared.Messaging;
+using CommerceCQRS.Cart.Write.Application.Translator;
 
 namespace CommerceCQRS.Cart.Write.Infrastructure
 {
@@ -28,12 +29,16 @@ namespace CommerceCQRS.Cart.Write.Infrastructure
 
             foreach (var domainEvent in domainEvents)
             {
+                var integrationEvent = DomainEventMapper.ToIntegrationEvent(domainEvent);
+
+                if (integrationEvent == null) continue; // Skip internal-only events
+
                 var outboxMessage = new OutboxMessage
                 {
-                    Id = Guid.NewGuid(),
-                    OccurredOn = domainEvent.OccurredOnUtc,
-                    Type = domainEvent.GetType().AssemblyQualifiedName!,
-                    Content = JsonSerializer.Serialize(domainEvent),
+                    Id = integrationEvent.EventId,
+                    OccurredOn = integrationEvent.OccurredOnUtc,
+                    Type = integrationEvent.GetType().AssemblyQualifiedName!,
+                    Content = JsonSerializer.Serialize(integrationEvent),
                 };
                 OutboxMessages.Add(outboxMessage);
             }

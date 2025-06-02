@@ -1,5 +1,4 @@
-﻿using CommerceCQRS.Cart.Write.Domain.Dtos;
-using CommerceCQRS.Cart.Write.Domain.Events;
+﻿using CommerceCQRS.Cart.Write.Domain.Events;
 using CommerceCQRS.Cart.Write.Domain.Exception;
 using CommerceCQRS.Services.Shared.Domain;
 
@@ -81,7 +80,7 @@ namespace CommerceCQRS.Cart.Write.Domain
                 throw new DomainException((int)ErrorCode.EmptyCart, "Cannot checkout empty cart");
 
             this.Status = CartStatus.CheckedOut;
-            this.AddDomainEvent(new CartCheckedOutDomainEvent(this.Id,this.UserId, CartItemMapper.ToDtoList(this.Items)));
+            this.AddDomainEvent(new CartCheckedOutDomainEvent(this.Id,this.UserId, this.Items));
         }
 
         private void CheckForEditable()

@@ -1,5 +1,4 @@
-﻿using CommerceCQRS.Cart.Write.Domain.Dtos;
-using CommerceCQRS.Services.Shared.Domain;
+﻿using CommerceCQRS.Services.Shared.Domain;
 
 namespace CommerceCQRS.Cart.Write.Domain.Events
 {
@@ -8,7 +7,7 @@ namespace CommerceCQRS.Cart.Write.Domain.Events
         public CartCheckedOutDomainEvent(
             Guid cartId,
             Guid userId,
-            IEnumerable<CartItemDto> items)
+            IEnumerable<CartItem> items)
         {
             this.CartId = cartId;
             this.UserId = userId;
@@ -17,6 +16,6 @@ namespace CommerceCQRS.Cart.Write.Domain.Events
         }
         public Guid CartId { get; }
         public Guid UserId { get; }
-        public IEnumerable<CartItemDto> Items { get; }
+        public IEnumerable<CartItem> Items { get; }
     }
 }
